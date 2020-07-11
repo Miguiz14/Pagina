@@ -57,7 +57,7 @@ body{
 }
 #logotipo:hover{
     border-radius: 2px;
-    color: #1714dc;
+    color: crimson;
     background-color: #ffffff;
 }
 #logotipo:hover .gear{

@@ -1,0 +1,621 @@
+@font-face{
+    font-family: "trebuchetMS";
+    src: url(fonts/TrebuchetMS.ttf);
+    font-size: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "BebasNeue";
+    src: url(./fonts/BebasNeue.otf);
+    font-size: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src: url(fonts/websymbols-Regular-webfont.eot);
+    src: url(fonts/websymbols-Regular-webfont.eot?#iefix) format('embedded-opentype'),
+    url(fonts/fonts/websymbols-Regular-webfont.woff) format('woff'),
+    url(fonts/websymbols-Regular-webfont.ttf) format('truetype'),
+    url(fonts/websymbols-Regular-webfont.svg#WebSymbolsRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: url(../img/pattern.png);
+}
+.wrap{
+    width: 1250px;
+    margin: 0px auto;
+}
+#header{
+    width: 100%;
+    height: 75px;
+    background-color: rgb(27, 28, 31);
+    color: white;
+    font-family: "BebasNeue";
+}
+.gear,.icon{
+    
+    font-family: WebSymbolsRegular;
+}
+#logotipo{
+    float: left;
+    height: 60px;
+    width: 170px;
+    background-color: crimson;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    margin-left: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 50ms;
+}
+#logotipo:hover{
+    border-radius: 2px;
+    color: rgb(223, 18, 18);
+    background-color: #ffffff;
+}
+#logotipo:hover .gear{
+    animation: fromBellow 500ms linear;
+}
+@keyframes fromBellow{
+    0%{
+        transform: translateY(200%);
+    }
+   
+    100%{
+        transform: translateY(0%);
+    }
+}
+#logotipo:hover h3{
+    animation: fromRight 450ms linear;
+}
+@keyframes fromRight{
+    0%{
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+#logotipo .gear{
+    display: block;
+    float: left;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 26px;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes rotate-gear{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#logotipo h3{
+    font-size: 40px;
+    display: block;
+    float: right;
+    margin-top: 6px;
+    transition: all 500ms;
+    margin-right: 20px;
+}
+#menu{
+    float: right;
+    margin-right: 20px;
+    height: 70px;
+    background-color: transparent;
+}
+#menu ul li {
+    font-size: 30px;
+    display: inline-block;
+    margin: 0px 10px 0px 10px;
+    letter-spacing: 1px;
+    line-height: 75px;
+}
+#menu ul li a{
+    text-decoration: none;
+    display: block;
+   color: white;
+   transition: all 200ms;
+}
+#menu ul li a:hover{
+    color: crimson;
+    transform: scale(1.2, 1.2);
+}
+#banner{
+    width: 100%;
+    height: 100px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    background: url(../img/bakbaner.png);
+    background-position: -230px -150px;
+    margin: 20px auto;
+    animation: backBanner 7s linear;
+}
+@keyframes backBanner{
+    0%{
+        background-position: 0px 0px ;
+    }
+    100%{
+        background-position: -230px -150px;
+    }
+}
+#banner h1{
+    display:block;
+    width: 850px;
+    font-family: "BebasNeue";
+    color: white;
+    font-size: 70px;
+    letter-spacing: 5px;
+    text-align: center;
+    text-align: center;
+    margin-top: 15px;
+    text-shadow: 2px 2px 4px black;
+    animation: showText 7s linear;
+    overflow: hidden;
+}
+@keyframes showText{
+0%{
+transform: translateX(-600%) scale(3,3);
+opacity: 1;
+}
+50%{
+transform: translateX(600%) scale(3,3);
+opacity: 1;
+}
+75%{
+    transform: translateX(-600%) scale(3,3);
+    text-shadow: none;
+    opacity: 0;
+    color: transparent;
+}
+100%{
+    transform: translateX(0%) scale(1,1);
+    text-shadow: 2px 2px 4px black;
+    color: white;
+    opacity: 1;
+
+}
+}
+#cards{
+    margin-top: 2%;
+}
+.card{
+    float: left;
+   background: rgb(244, 245, 247);
+    height: 305px;
+    width: 205px;
+    border: 1px solid rgba(245, 59, 84, 0.74);
+    box-shadow: 1px 1px 4px rgba(219, 32, 63, 0.781);
+    overflow:hidden;
+    margin:20px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all 500ms;
+}
+.card:hover{
+    background-color: #ad0a2b;
+}
+.card .icon{
+    width: 100%;
+    display: block;
+    height: 130px;
+    font-size: 50px;
+    line-height: 110px;
+    text-align: center;
+    margin: 0px auto;
+    color: rgb(219, 42, 71);
+    
+}
+.card:hover .icon{
+    font-size: 70px;
+    color: white;
+    animation: showIcon 300ms linear;
+}
+@keyframes showIcon{
+    0%{
+        transform: translateY(-150%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+.card .category{
+    width: 100%;
+    height: 50px;
+    font-family: "TrebuchetMS";
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    padding: 5px;
+    color: rgb(109, 10, 30);
+    transition: all 500ms;
+}
+.card:hover .category{
+    color: white;
+    animation: showCategory 400ms linear;
+}
+@keyframes showCategory{
+    0%{
+        transform: translateY(-300%);
+        color: crimson;
+    }
+    100%{
+        transform: translateY(0%);
+        color: white;
+    }
+}
+.card .description{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(148, 9, 37);
+    transition: all 300ms;
+}
+.card:hover .description{
+    animation: showDescription 500ms linear;
+    color: white;
+}
+@keyframes showDescription{
+    0%{
+        transform: translateX(-300%);
+        color: #ad0a2b;
+    }
+    100%{
+        transform: translateX(0%);
+        color: white;
+    }
+}
+#lateral{
+    width: 300px;
+    min-height: 1200px;
+    font-family: "TrebuchetMS";
+    float: right;
+    margin: 35px;
+}
+aside h3{
+    display: block;
+    width: auto;
+    height: 45px;
+    line-height: 49px;
+    background: url(../img/pxgray.png), white;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    font: 30px;
+    font-family: "BebasNeue";
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+#lateral h3:first-child{
+    margin-top: 0px;
+}
+#buscar{
+    width: 100%;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 4px #ccc inset;
+   
+}
+#lateral input[type="text"]{
+    width: 88%;
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ccc;
+    transition: all 500ms;
+}
+#lateral input[type="button"],
+#lateral input[type="submit"]{
+    height: 30px;
+    width: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-left: 1px solid #ccc;
+    color: #555;
+
+}
+#lateral input[type="text"]:focus{
+    
+    color:  black;
+
+}
+.box{
+    width: 85%;
+    height: 240px;
+    margin: 0px auto;
+    padding-top: 2px;
+    background-color: aliceblue;
+    
+    box-shadow: 0px 0px 1px rgb(0,0,0,0.3),0px 3px 7px rgb(0,0,0,0.3),0px 1px white inset, 0px -3px 2px rgb(0,0,0,0.3)inset; 
+}
+#login input[type="email"],#login input[type="password"] {
+    display: block;
+    margin: 0px auto;
+    width: 75%;
+    height: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #ccc inset;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding-left: 35px;
+    color: grey;
+}
+#login input[type="email"]:focus,#login input[type="password"]:focus {
+    color: #555555;
+    box-shadow: 1px 1px 1px grey inset;
+}
+#login #user,
+#login #password{
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 6px;
+    height: 30px;
+}
+#login #password{
+    margin-left: 21px;
+    margin-top: 28px;
+}
+#login input[type="button"],
+#login input[type="submit"],
+#login input[type="reset"],
+#login button{
+    display: INLINE;
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    margin-top: 20px;
+    color: white;
+    background: linear-gradient(to bottom, #e6516f 0%, #f0113d 100%);
+    border: 1px solid #990724;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "TrebuchetMS";
+    font-weight: lighter;
+    margin-left: 17px;
+    transition: all 500ms;
+}
+#login input[type="button"]:hover,
+#login input[type="submit"]:hover,
+#login input[type="reset"]:hover,
+#login button:hover{
+   box-shadow: 0px 0px 3px gray;
+}
+#login a {
+    text-decoration: none;
+    margin-left: 17px;
+    display: block;
+    margin-top: 7px;
+    font-size: 14px;
+    color: #393d3f;
+    transition: 250 all;
+}
+#login a:hover {
+   color: #e02e52;
+}
+#social{
+    
+    height: 250px;
+}
+#social a{
+    font-size: 50px;
+    display: block;
+    color: crimson;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    transition: all 500ms;
+}
+#social .overlay{
+    height: 20px;
+    display: block;
+    font-family: "BebasNeue";
+    font-weight: bold;
+    box-shadow: 0px 0px 3px #ccc;
+    letter-spacing: 1px;
+    border: 3px solid rgb(228, 49, 79);
+    box-shadow: 0px 0px 4px #ccc;
+    background-color: #dd2150;
+    position: absolute;
+    color: white;
+    padding: 5px;
+    margin-left: 80px;
+    margin-top: -65px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 500ms;
+}
+#social div:hover .overlay{
+    opacity: 1;
+    transform: translateX(0%);
+}
+#social a:hover{
+    color: #a71232;
+    transform: scale(1.1, 1.1);
+}
+#article{
+    margin-left: 50px;
+width: 860px;
+float: left;
+}
+#article h2{
+    display: block;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background: rgb(212, 18, 60);
+    color: white;
+    box-shadow: 0px 1px 0px #949596, 1px 2px 0px #a7b1b6, 2px 3px 0px #bcc3c7, 3px 4px 0px #b3c9d4;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+#article article{
+width: 90%;
+height: auto;
+border: 1px solid #b3c9d4;
+margin: 40px auto;
+padding: 10px;
+font-family: "TrebuchetMS";
+background: white;
+color: black;
+box-shadow: 1px 1px 2px #ddd;
+}
+#article article h4{
+    display: block;
+    font-size: 23px;
+    margin: 3px;
+}
+#article article h4 a{
+    text-decoration: none;
+    color: rgb(212, 24, 49);
+    transition: all 100ms;
+}
+#article article h4 a:hover{
+    color: rgb(207, 57, 82);
+    text-decoration: underline;
+}
+#article .data{
+    float: right;
+    background: #f11541;
+    color: rgb(255, 255, 255);
+    height: 30px;
+    line-height: 30px;
+    margin: -10px;
+    padding: 4px;
+    font-size: 13px;
+    border-radius:8px 0px 0px 8px ;
+}
+#article .data span{
+    margin: 6px
+}
+#article article p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+#blog{
+    height: 100px;
+    margin: 60px;
+    line-height: 100px;
+    text-align: center;
+    font-family: "BebasNeue";
+    transition: all 1s;
+}
+
+#blog a{
+    display: block;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #e60a3a;
+    text-decoration: none;
+    transition: all 300ms;
+    
+}
+#blog:hover{
+    border: 5px solid #a71232;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #e4788d;
+}
+#blog a:hover{
+    text-shadow: 1px 1px 1px black, 1px 2px 1px black,1px 3px 1px black,1px 4px 1px black,1px 5px 1px black;
+
+}
+#footer{
+    width: 100%;
+    height: 470px;
+    background: rgb(187, 42, 42);
+    color: white;
+    overflow: hidden;
+}
+#footer .wrap > div{
+    float: left;
+    width: 320px;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: white;
+    font-family: "TrebuchetMS";
+}
+footer a{
+    text-decoration: none;
+    color: #dad8e9;
+    transition: all 300ms;
+    
+}
+#footer h5{
+    display: block;
+    background: url(../img/pxgray.png);
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    line-height: 55px;
+    color: wheat;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+#footer ul{
+    text-align: left;
+    margin: 20px;
+    font-size: 25px;
+}
+#footer ul li{
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    text-transform: uppercase;
+}
+#fotter ul li a{
+    display: block;
+    height: 40px;
+   
+}
+#footer iframe{
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 5px grey;
+}
+#footer img{
+    margin-bottom: 15px;
+}
+#footer #browser img{
+    width: 45px;
+}
